@@ -1,0 +1,242 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap');
+
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+   scroll-behavior: auto;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+:root {
+    --clr-dark-cyan:hsl(158, 36%, 37%);
+    --clr-cream:hsl(30, 38%, 92%);
+    --clr-dark-blue:hsl(212, 21%, 14%);
+    --clr-Dark-grayish-blue: hsl(228, 12%, 48%);
+    --clr-White: hsl(0, 0%, 100%);
+}
+
+
+
+/* 
+             Fonts
+
+font-family: 'Fraunces', serif;
+
+font-family: 'Montserrat', sans-serif;
+
+*/
+
+
+body {
+    background-color: var(--clr-cream);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family:'Fraunces','Montserrat' serif;
+
+}
+
+
+.container {
+    display: flex;
+    background-color: var(--clr-cream);
+    height: 450px;
+    width: 600px;
+
+}
+
+.left {
+    background-image: url(images/image-product-desktop.jpg);
+    background-size: cover;
+    width: 300px;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+
+.right {
+    background-color: var(--clr-White);
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+h3 {
+    color: var(--clr-Dark-grayish-blue);
+    margin-left: 25px;
+    padding-top: 25px;
+    font-family: 'Montserrat', serif;
+    font-weight: 500;
+}
+
+h2 {
+    width: 11ch;
+    margin-left: 25px;
+    padding-top: 20px;
+    font-size: 28px;
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+
+p {
+    font-family: 'Montserrat', serif;
+    margin-left: 25px;
+    padding-top: 25px;
+    width: 30ch;
+    color: var(--clr-Dark-grayish-blue);
+    font-size: 14px;
+}
+
+.price {
+    /* border: 1px solid red; */
+    margin-left: 25px;
+
+}
+
+.new {
+    font-family: 'Fraunces', serif;
+    font-size: 34px;
+    color: var(--clr-dark-cyan);
+}
+
+.old {
+    text-decoration: line-through;
+    color: var(--clr-Dark-grayish-blue);
+    margin-left: 20px;
+    font-family: 'Montserrat',serif;
+    font-weight: 500;
+
+}
+
+button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--clr-dark-cyan);
+    color: var(--clr-White);
+    display: flex;
+    margin-left: 25px;
+    margin-right: 25px;
+    width: 250px;
+    height: 45px;
+    border-radius: 10px;
+    font-weight: 700;
+    border: 1px transparent white;
+    margin-top: 20px;
+}
+
+
+button img {
+    margin-right: 20px;
+}
+
+.attribution {
+    margin-top: 100px;
+}
+
+
+@media all and (max-width:620px) {
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: 700px;
+        width: 380px;
+    }
+    .left {
+        background-image: url(images/image-product-mobile.jpg);
+        background-position: center;
+        width: 380px;
+        height: 300px;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 10px;
+    }
+
+    .right {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 10px;
+        text-align: left;
+    }
+
+    button {
+        width: 340px;
+        margin-bottom: 20px;
+        margin-left: 25px;
+    }
+
+    .attribution {
+        margin-top: 30px;
+    }
+}
